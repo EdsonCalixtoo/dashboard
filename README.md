@@ -1,286 +1,91 @@
-# 📊 Dashboard Profissional
+# Dashboard
 
-Uma dashboard moderna e responsiva desenvolvida com **HTML, CSS e JavaScript puro**, demonstrando código bem organizado e profissional.
+Uma dashboard que comecei um tempo atrás para estudar e praticar. Sempre gostei de entender como as coisas funcionam por baixo, então fiz tudo com vanilla JavaScript.
 
-## 🎯 Características
+## O que tem aqui
 
-- ✅ **Totalmente Responsivo** - Funciona em desktop, tablet e mobile
-- ✅ **Design Moderno** - Interface limpa e profissional
-- ✅ **Código Bem Organizado** - Separação clara de concerns
-- ✅ **Gráficos Interativos** - Gráficos de barras, pizza e linha
-- ✅ **Modo Mobile First** - Design otimizado para todos os dispositivos
-- ✅ **Sem Dependências Externas** - 100% vanilla JavaScript
-- ✅ **Acessível** - Segue boas práticas de acessibilidade
-- ✅ **Performance** - Otimizado para velocidade
+Dashboard com as seções básicas: um overview com KPIs e gráficos, análises de dados, gerenciamento de usuários, alguns relatórios e configurações. Nada de super complexo, mas serve pra entender melhor como estruturar um projeto maior.
 
-## 📁 Estrutura do Projeto
+## Rodando
+
+Bem direto. Abre o `index.html` no navegador e pronto.
+
+## Estrutura
 
 ```
 Dashboard/
-│
-├── index.html                 # Arquivo HTML principal
-│
+├── index.html           # A página principal
 ├── assets/
 │   ├── css/
-│   │   ├── style.css         # Estilos principais
-│   │   └── responsive.css    # Estilos responsivos
-│   │
-│   ├── js/
-│   │   ├── config.js         # Configurações da aplicação
-│   │   ├── utils.js          # Funções utilitárias
-│   │   ├── charts.js         # Gerenciamento de gráficos
-│   │   ├── data.js           # Dados de exemplo
-│   │   ├── ui.js             # Gerenciamento da interface
-│   │   └── app.js            # Arquivo principal
-│   │
-│   └── images/               # Imagens da aplicação
-│
-└── README.md                  # Documentação
+│   │   ├── style.css        # Estilos principais
+│   │   └── responsive.css   # Responsividade
+│   └── js/
+│       ├── config.js    # Configurações
+│       ├── utils.js     # Funções úteis
+│       ├── charts.js    # Gráficos
+│       ├── data.js      # Dados de exemplo
+│       ├── ui.js        # Interface
+│       └── app.js       # App principal
 ```
 
-## 🚀 Como Usar
+### Funcionalidades
 
-### Instalação
+**Dashboard**
+- Cards com alguns KPIs
+- Gráfico de vendas
+- Gráfico de categorias
+- Lista de atividades
 
-1. Clone ou baixe o projeto
-2. Abra `index.html` no seu navegador
-3. Pronto! A dashboard está funcionando
-
-Não há dependências externas para instalar.
-
-### Primeiro Acesso
-
-- Veja a dashboard principal com KPIs e gráficos
-- Navegue pelos diferentes seções usando o menu lateral
-- Interaja com os gráficos (hover para ver detalhes)
-- Teste em diferentes tamanhos de tela (redimensione o navegador)
-
-## 📚 Documentação dos Arquivos
-
-### HTML (index.html)
-
-Estrutura semântica completa com:
-- Sidebar de navegação
-- Header com busca e perfil
-- Seções de conteúdo
-- Dados carregados dinamicamente
-
-### CSS (assets/css/)
-
-**style.css** - Estilos principais:
-- Sistema de cores com variáveis CSS
-- Layout flexbox e grid
-- Animações e transições
-- Componentes reutilizáveis
-
-**responsive.css** - Design responsivo:
-- Mobile first approach
-- Breakpoints: 768px e 480px
-- Modo landscape
-- Estilos de impressão
-
-### JavaScript Modular
-
-#### config.js
-Configurações centralizadas:
-```javascript
-const CONFIG = {
-    API: { ... },
-    UI: { ... },
-    DATA: { ... },
-    FEATURES: { ... },
-    MESSAGES: { ... }
-};
-```
-
-#### utils.js
-Funções utilitárias:
-- Formatação de datas e moedas
-- Validações
-- Cookies
-- Requisições HTTP
-- Debounce/Throttle
-- Logging
-
-```javascript
-Utils.formatCurrency(45230)        // R$ 45.230,00
-Utils.formatDate(new Date())       // 16/01/2026
-Utils.getTimeAgo(date)             // há 5 minutos
-Utils.isValidEmail(email)          // true/false
-```
-
-#### charts.js
-Sistema de gráficos:
-- Gráficos de barras
-- Gráficos de pizza
-- Gráficos de linha
-- Totalmente interativos
-
-```javascript
-Charts.renderBarChart('elementId', data);
-Charts.renderPieChart('elementId', data);
-Charts.renderLineChart('elementId', data);
-```
-
-#### data.js
-Dados de exemplo:
-- Vendas mensais
-- Distribuição por categoria
-- Análise de conversão
+**Análises**
+- Gráfico de conversão
 - Tráfego por dispositivo
-- Usuários
-- Atividades
-- Relatórios
+- Filtros
 
-#### ui.js
-Gerenciamento da interface:
-- Navegação entre seções
-- Renderização de componentes
-- Interatividade
-- Notificações toast
+**Usuários**
+- Tabela com dados
 
-```javascript
-UI.init()                          // Inicializa a interface
-UI.switchSection('dashboard')      // Muda de seção
-UI.showToast('Sucesso!')          // Mostra notificação
-```
+**Relatórios**
+- Cards com relatórios
 
-#### app.js
-Aplicação principal:
-- Inicialização
-- Global listeners
-- Verificação de navegador
-- Carregamento de configurações
-- Métodos auxiliares
+**Configurações**
+- Notificações
+- Algumas opções
 
-```javascript
-const app = new App();
-app.init();
-app.getStats();
-app.exportToCSV(data);
-```
+## Responsividade
 
-## 🎨 Esquema de Cores
+Funciona bem em mobile, tablet e desktop.
 
-```
-Primária:    #2563eb (Azul)
-Secundária:  #1e40af (Azul Escuro)
-Accent:      #f59e0b (Âmbar)
-Sucesso:     #10b981 (Verde)
-Erro:        #ef4444 (Vermelho)
-```
+## Customização
 
-## 📱 Responsividade
+As cores estão em variáveis CSS em `style.css`.
 
-### Desktop (>= 1024px)
-- Sidebar fixo
-- Layout completo
-- Todos os elementos visíveis
+Os dados estão em `data.js`.
 
-### Tablet (768px - 1023px)
-- Sidebar reduzido
-- Grid 2 colunas
-- Ajustes de espaçamento
+Se quiser adicionar uma seção nova, é só copiar uma existente, mudar o id e adicionar o link no menu.
 
-### Mobile (< 768px)
-- Sidebar mobile (drawer)
-- Grid 1 coluna
-- Menu hamburger
-- Navegação otimizada
+## Organização do Código
 
-### Extra Small (< 480px)
-- Ajustes finos
-- Texto reduzido
-- Padding otimizado
+Separei em módulos:
 
-## 🔧 Customização
+- **config.js**: Configurações
+- **utils.js**: Funções reutilizáveis
+- **charts.js**: Renderização de gráficos
+- **data.js**: Dados
+- **ui.js**: Interface e navegação
+- **app.js**: Inicialização
 
-### Alterar Cores
+## Debug
 
-Edite `assets/css/style.css`:
-```css
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    /* ... */
-}
-```
+Abre o console do navegador (F12) e digita `App.showDebugInfo()`. Mostra informações de tudo que tá rodando.
 
-### Adicionar Seção
+## Debug
 
-1. Adicione no HTML:
-```html
-<section id="nova-secao" class="section">
-    <!-- Conteúdo -->
-</section>
-```
+Abre o console do navegador (F12) e digita `App.showDebugInfo()` pra ver informações.
 
-2. Adicione nav link:
-```html
-<a href="#" class="nav-link" data-section="nova-secao">
-    <i class="icon">📌</i> Nova Seção
-</a>
-```
+## Dados
 
-3. Adicione titulo em `ui.js`:
-```javascript
-const titles = {
-    // ...
-    'nova-secao': 'Nova Seção'
-};
-```
+Os dados são fictícios por enquanto. Não tem integração com API ainda.
 
-### Integrar com API
+## Notas
 
-Substitua dados em `data.js` com chamadas reais:
-```javascript
-async function loadData() {
-    const data = await Utils.fetch('https://api.example.com/data');
-    return data;
-}
-```
-
-## 🔒 Segurança
-
-- Sem dados sensíveis no código
-- Validações de entrada
-- XSS protection
-- CSRF safe (em produção, use tokens)
-
-## ⚡ Performance
-
-- Minificar CSS e JS em produção
-- Lazy loading de imagens
-- Cache de dados
-- Debounce de eventos
-
-## 🌐 Navegadores Suportados
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-- Mobile Safari (iOS 14+)
-- Chrome Mobile (Android 8+)
-
-## 📊 Dados Exemplo
-
-Os dados são fictícios e servem apenas como exemplo. Para dados reais, altere `assets/js/data.js` ou integre uma API.
-
-## 🤝 Contribuições
-
-Para melhorias ou sugestões, sinta-se livre para fazer modificações!
-
-## 📝 Licença
-
-Projeto de demonstração profissional. Use livremente.
-
-## 👨‍💻 Autor
-
-Dashboard desenvolvida como exemplo de código bem organizado e profissional para apresentações em empresas.
-
----
-
-**Desenvolvido com ❤️ em JavaScript puro**
-
-Para debug, abra o console e digite: `App.showDebugInfo()`
+Esse projeto foi bom pra aprender melhor sobre modularização em JavaScript. Provavelmente não vou desenvolver muito mais, mas deixa como está. Pode ser útil como referência.
