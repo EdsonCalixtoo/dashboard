@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Profissional</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="logo">Dashboard</h2>
+            <button class="toggle-sidebar" id="toggleSidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="nav-link active" data-section="dashboard">
+                    <i class="icon">📊</i> Dashboard
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="analytics">
+                    <i class="icon">📈</i> Análises
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="users">
+                    <i class="icon">👥</i> Usuários
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="reports">
+                    <i class="icon">📋</i> Relatórios
+                </a></li>
+                <li><a href="#" class="nav-link" data-section="settings">
+                    <i class="icon">⚙️</i> Configurações
+                </a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>&copy; 2024 Edson Calixto Inc.</p>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-left">
+                <h1 id="pageTitle">Dashboard</h1>
+                <p class="breadcrumb" id="breadcrumb">Início</p>
+            </div>
+
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Pesquisar...">
+                    <button class="search-btn">🔍</button>
+                </div>
+
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+                    <div class="user-info">
+                        <p class="user-name">João Silva</p>
+                        <p class="user-role">Administrador</p>
+                    </div>
+                    <button class="dropdown-btn">▼</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD SECTION -->
+        <section id="dashboard" class="section active">
+            <!-- KPI CARDS -->
+            <div class="kpi-container">
+                <div class="kpi-card">
+                    <div class="kpi-icon">💰</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Receita Total</p>
+                        <h3 class="kpi-value">R$ 45.230</h3>
+                        <p class="kpi-change positive">↑ 12.5%</p>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">📦</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Produtos Vendidos</p>
+                        <h3 class="kpi-value">1.240</h3>
+                        <p class="kpi-change positive">↑ 8.2%</p>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">👥</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Novos Clientes</p>
+                        <h3 class="kpi-value">328</h3>
+                        <p class="kpi-change negative">↓ 3.1%</p>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">⭐</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Satisfação</p>
+                        <h3 class="kpi-value">4.8/5</h3>
+                        <p class="kpi-change positive">↑ 2.3%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHARTS SECTION -->
+            <div class="charts-section">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Vendas Mensais</h3>
+                        <select id="monthSelect" class="chart-select">
+                            <option>Últimos 6 meses</option>
+                            <option>Últimos 12 meses</option>
+                        </select>
+                    </div>
+                    <div class="chart-container" id="lineChart">
+                        <!-- Gráfico de linha será renderizado aqui -->
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Distribuição por Categoria</h3>
+                    </div>
+                    <div class="chart-container" id="pieChart">
+                        <!-- Gráfico de pizza será renderizado aqui -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECENT ACTIVITY -->
+            <div class="activity-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Atividades Recentes</h3>
+                        <a href="#" class="view-all">Ver tudo</a>
+                    </div>
+                    <div class="activity-list" id="activityList">
+                        <!-- Items de atividade serão carregados aqui -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANALYTICS SECTION -->
+        <section id="analytics" class="section">
+            <div class="filters">
+                <input type="date" id="dateFrom" class="filter-input">
+                <input type="date" id="dateTo" class="filter-input">
+                <button class="btn-primary" id="filterBtn">Filtrar</button>
+            </div>
+
+            <div class="charts-section">
+                <div class="chart-card">
+                    <h3>Análise de Conversão</h3>
+                    <div class="chart-container" id="conversionChart"></div>
+                </div>
+                <div class="chart-card">
+                    <h3>Tráfego por Dispositivo</h3>
+                    <div class="chart-container" id="deviceChart"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- USERS SECTION -->
+        <section id="users" class="section">
+            <div class="section-header">
+                <h2>Gerenciar Usuários</h2>
+                <button class="btn-primary">+ Novo Usuário</button>
+            </div>
+
+            <div class="card">
+                <table class="users-table" id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Data Cadastro</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <!-- Usuários serão carregados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- REPORTS SECTION -->
+        <section id="reports" class="section">
+            <div class="section-header">
+                <h2>Relatórios</h2>
+                <button class="btn-primary">📥 Exportar</button>
+            </div>
+
+            <div class="reports-grid" id="reportsGrid">
+                <!-- Relatórios serão carregados aqui -->
+            </div>
+        </section>
+
+        <!-- SETTINGS SECTION -->
+        <section id="settings" class="section">
+            <div class="settings-container">
+                <h2>Configurações</h2>
+                
+                <div class="settings-group">
+                    <h3>Preferências Gerais</h3>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="notifications" checked>
+                            <span>Ativar notificações</span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="darkMode">
+                            <span>Modo escuro (em desenvolvimento)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Segurança</h3>
+                    <button class="btn-secondary">Alterar Senha</button>
+                    <button class="btn-secondary">Autenticação de Dois Fatores</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

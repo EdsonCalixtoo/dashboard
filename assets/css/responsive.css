@@ -1,0 +1,433 @@
+/* ============================================
+   RESPONSIVE DESIGN - DASHBOARD
+   ============================================ */
+
+/* ============================================
+   DESKTOP (>= 1024px) - PADRÃO
+   ============================================ */
+
+/* ============================================
+   TABLET (768px - 1023px)
+   ============================================ */
+@media (max-width: 1023px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-container {
+        margin-left: 250px;
+    }
+
+    .kpi-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: var(--spacing-lg);
+    }
+
+    .charts-section {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-lg);
+    }
+
+    .header-right {
+        gap: var(--spacing-lg);
+    }
+
+    .section-header {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        padding: var(--spacing-lg);
+    }
+
+    .reports-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: var(--spacing-lg);
+    }
+}
+
+/* ============================================
+   MOBILE - MEDIUM (480px - 767px)
+   ============================================ */
+@media (max-width: 767px) {
+    /* SIDEBAR - MOBILE */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1200;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        height: 100vh;
+    }
+
+    .toggle-sidebar {
+        display: flex;
+    }
+
+    /* MAIN CONTAINER */
+    .main-container {
+        margin-left: 0;
+    }
+
+    /* HEADER */
+    .header {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-lg);
+        align-items: flex-start;
+    }
+
+    .header-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-right {
+        width: 100%;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .user-profile {
+        width: 100%;
+        padding: var(--spacing-md);
+    }
+
+    /* KPI CARDS */
+    .kpi-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .kpi-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* CHARTS */
+    .charts-section {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: 0 var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .chart-card {
+        padding: var(--spacing-md);
+    }
+
+    .chart-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+
+    .chart-container {
+        min-height: 250px;
+    }
+
+    /* ACTIVITY */
+    .activity-section {
+        padding: 0 var(--spacing-lg) var(--spacing-lg);
+    }
+
+    /* SECTION HEADER */
+    .section-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+        padding: 0 var(--spacing-lg);
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-header .btn-primary {
+        width: 100%;
+    }
+
+    /* TABLE */
+    .users-table {
+        font-size: 0.85rem;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    /* BUTTONS */
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: var(--spacing-md);
+    }
+
+    /* FILTERS */
+    .filters {
+        flex-direction: column;
+        padding: var(--spacing-lg);
+    }
+
+    .filter-input {
+        width: 100%;
+    }
+
+    .filters .btn-primary {
+        width: 100%;
+    }
+
+    /* REPORTS GRID */
+    .reports-grid {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-lg);
+    }
+
+    /* SETTINGS */
+    .settings-container {
+        padding: var(--spacing-lg);
+    }
+
+    .settings-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   MOBILE - SMALL (< 480px)
+   ============================================ */
+@media (max-width: 479px) {
+    /* SIDEBAR */
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-header {
+        padding: var(--spacing-lg);
+    }
+
+    .nav-link {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: 0.95rem;
+    }
+
+    /* HEADER */
+    .header {
+        padding: var(--spacing-md);
+    }
+
+    .header-left h1 {
+        font-size: 1.25rem;
+    }
+
+    .header-left p {
+        font-size: 0.8rem;
+    }
+
+    .user-profile {
+        justify-content: space-between;
+    }
+
+    .user-info {
+        display: none;
+    }
+
+    /* KPI CARDS */
+    .kpi-container {
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+    }
+
+    .kpi-card {
+        padding: var(--spacing-md);
+    }
+
+    .kpi-icon {
+        font-size: 2rem;
+    }
+
+    .kpi-value {
+        font-size: 1.5rem;
+    }
+
+    /* CHARTS */
+    .charts-section {
+        padding: 0 var(--spacing-md);
+    }
+
+    .chart-card {
+        padding: var(--spacing-md);
+    }
+
+    .chart-header h3 {
+        font-size: 1rem;
+    }
+
+    .chart-container {
+        min-height: 200px;
+    }
+
+    /* ACTIVITY */
+    .activity-section {
+        padding: 0 var(--spacing-md) var(--spacing-md);
+    }
+
+    .activity-item {
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+
+    .activity-title {
+        font-size: 0.9rem;
+    }
+
+    /* TABLE */
+    .card {
+        padding: var(--spacing-md);
+    }
+
+    .users-table {
+        font-size: 0.75rem;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: var(--spacing-sm);
+    }
+
+    /* SECTION HEADER */
+    .section-header {
+        padding: 0 var(--spacing-md);
+    }
+
+    .section-header h2 {
+        font-size: 1.25rem;
+    }
+
+    /* BUTTONS */
+    .btn-primary,
+    .btn-secondary {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+    }
+
+    /* FILTERS */
+    .filters {
+        padding: var(--spacing-md);
+    }
+
+    .filter-input {
+        padding: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+
+    /* REPORTS */
+    .reports-grid {
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+    }
+
+    .report-title {
+        font-size: 1rem;
+    }
+
+    .report-description {
+        font-size: 0.8rem;
+    }
+
+    /* SETTINGS */
+    .settings-container {
+        padding: var(--spacing-md);
+    }
+
+    .settings-container h2 {
+        font-size: 1.25rem;
+    }
+
+    .settings-group h3 {
+        font-size: 1rem;
+    }
+
+    .settings-group {
+        padding: var(--spacing-md);
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+}
+
+/* ============================================
+   MODO LANDSCAPE (Tablets)
+   ============================================ */
+@media (max-height: 600px) and (orientation: landscape) {
+    .sidebar {
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    .header {
+        padding: var(--spacing-md);
+    }
+
+    .kpi-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* ============================================
+   IMPRESSÃO (PRINT)
+   ============================================ */
+@media print {
+    .sidebar,
+    .header,
+    .toggle-sidebar {
+        display: none;
+    }
+
+    .main-container {
+        margin-left: 0;
+    }
+
+    .section {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .search-box,
+    .dropdown-btn {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .card,
+    .chart-card,
+    .kpi-card,
+    .report-card {
+        box-shadow: none;
+        border: 1px solid var(--neutral-300);
+        page-break-inside: avoid;
+    }
+}

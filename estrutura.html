@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura do Projeto - Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+        .structure {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .file-list {
+            background: #f5f5f5;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .file-item {
+            padding: 5px 0;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .file-item:last-child {
+            border-bottom: none;
+        }
+
+        .features {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .features h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .feature-item {
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .feature-item strong {
+            color: #667eea;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 0 10px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+        }
+
+        .highlight {
+            color: #66d9ef;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Dashboard Profissional</h1>
+
+        <div class="features">
+            <h2>✨ Características Principais</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <strong>✅ Responsivo</strong> - Mobile, tablet e desktop
+                </div>
+                <div class="feature-item">
+                    <strong>✅ Modular</strong> - Código bem organizado
+                </div>
+                <div class="feature-item">
+                    <strong>✅ Gráficos</strong> - Interativos e dinâmicos
+                </div>
+                <div class="feature-item">
+                    <strong>✅ Sem Dependências</strong> - 100% vanilla JS
+                </div>
+                <div class="feature-item">
+                    <strong>✅ Acessível</strong> - Seguindo boas práticas
+                </div>
+                <div class="feature-item">
+                    <strong>✅ Profissional</strong> - Pronto para apresentar
+                </div>
+            </div>
+        </div>
+
+        <div class="structure">
+            <div class="card">
+                <h2>📄 HTML</h2>
+                <p>Estrutura semântica e bem organizada com componentes reutilizáveis.</p>
+                <div class="file-list">
+                    <div class="file-item">index.html</div>
+                    <div class="file-item">- Sidebar</div>
+                    <div class="file-item">- Header</div>
+                    <div class="file-item">- KPI Cards</div>
+                    <div class="file-item">- Gráficos</div>
+                    <div class="file-item">- Tabelas</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🎨 CSS</h2>
+                <p>Estilos modernos com variáveis, grid layout e media queries.</p>
+                <div class="file-list">
+                    <div class="file-item">assets/css/</div>
+                    <div class="file-item">├─ style.css</div>
+                    <div class="file-item">│  (Estilos principais)</div>
+                    <div class="file-item">└─ responsive.css</div>
+                    <div class="file-item">   (Design responsivo)</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>⚙️ JavaScript</h2>
+                <p>Modular, bem comentado e fácil de manter.</p>
+                <div class="file-list">
+                    <div class="file-item">assets/js/</div>
+                    <div class="file-item">├─ config.js</div>
+                    <div class="file-item">├─ utils.js</div>
+                    <div class="file-item">├─ charts.js</div>
+                    <div class="file-item">├─ data.js</div>
+                    <div class="file-item">├─ ui.js</div>
+                    <div class="file-item">└─ app.js</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>📦 O que está incluído</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <strong>Dashboard Completa</strong> - Com múltiplas seções
+                </div>
+                <div class="feature-item">
+                    <strong>Gráficos Dinâmicos</strong> - Barras, pizza e linha
+                </div>
+                <div class="feature-item">
+                    <strong>Gerenciamento de Usuários</strong> - Com tabela interativa
+                </div>
+                <div class="feature-item">
+                    <strong>Sistema de Relatórios</strong> - Cards com dados
+                </div>
+                <div class="feature-item">
+                    <strong>Configurações</strong> - Preferências do usuário
+                </div>
+                <div class="feature-item">
+                    <strong>Documentação Completa</strong> - README e guia
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>💡 Padrões Utilizados</h2>
+            <div class="code-block">
+// Singleton Pattern
+const app = new App();
+window.App = app;
+
+// Utility Class
+class Utils {
+    static formatCurrency(value) { }
+    static formatDate(date) { }
+}
+
+// Modularização
+export default class Charts { }
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>🎯 Como Usar</h2>
+            <p style="margin-bottom: 20px;">
+                1. Abra o arquivo <strong>index.html</strong> no navegador<br>
+                2. Navegue pelas diferentes seções<br>
+                3. Interaja com os gráficos<br>
+                4. Redimensione a janela para testar responsividade<br>
+                5. Customize conforme necessário
+            </p>
+            <div class="code-block">
+// Debug no console
+App.showDebugInfo()           // Ver informações
+Utils.formatCurrency(1000)    // R$ 1.000,00
+Charts.renderBarChart(...)    // Renderizar gráfico
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>📱 Responsividade</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <strong>Desktop</strong><br>
+                    ≥ 1024px - Layout completo
+                </div>
+                <div class="feature-item">
+                    <strong>Tablet</strong><br>
+                    768px - 1023px - Layout adaptado
+                </div>
+                <div class="feature-item">
+                    <strong>Mobile</strong><br>
+                    < 768px - Menu drawer
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="index.html" class="btn">🚀 Abrir Dashboard</a>
+            <a href="README.md" class="btn">📚 Documentação</a>
+        </div>
+
+        <footer>
+            <p>Dashboard Profissional desenvolvida com HTML, CSS e JavaScript puro</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                Demonstrando código bem organizado, modular e profissional
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        console.log('%cDashboard Profissional', 'color: #667eea; font-size: 18px; font-weight: bold;');
+        console.log('%cCódigo bem organizado para apresentar em empresas', 'color: #764ba2; font-size: 14px;');
+        console.log('%cAbra index.html para ver a dashboard em ação!', 'color: #667eea; font-size: 12px;');
+    </script>
+</body>
+</html>
